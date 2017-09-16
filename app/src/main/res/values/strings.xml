@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Helo</string>
+    <string name="n">Name</string>
+    <string name="sn">Surname</string>
+    <string name="fn">Fathers name</string>
+    <string name="gn">Group number</string>
+    <string name="fac">Faculty (FITAC 4ever)</string>
+</resources>
