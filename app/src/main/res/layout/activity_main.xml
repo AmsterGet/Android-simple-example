@@ -45,9 +45,10 @@
         android:id="@+id/link"
         android:textColor="#000000"
         android:background="#bac4f9"
-        android:layout_marginBottom="10dp"
         android:layout_above="@+id/button"
-        android:layout_centerHorizontal="true">
+        android:layout_toStartOf="@+id/inf"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="15dp">
     </Button>
 
     <Button
@@ -70,5 +71,26 @@
         android:layout_below="@+id/third"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp" />
+
+    <Button
+        android:id="@+id/piz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#bac4f9"
+        android:text="Use image"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/inf"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/laba_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/link"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/inf"
+        android:text="Laba_4"
+        android:textColor="#000000"
+        android:background="#bac4f9"/>
 
 </RelativeLayout>

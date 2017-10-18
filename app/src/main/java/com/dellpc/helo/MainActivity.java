@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.graphics.drawable.Drawable;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -15,12 +16,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button bt;
     private Button third;
     private Button inf;
+    private Button piz;
+    private Button laba_4;
     private TextView th;
     private RelativeLayout layout;
     private Toast toast;
     private int k;
+
     int idx=0;
-    private static int colorvals[]={R.color.red,R.color.colorAccent,R.color.colorPrimary, R.color.black};
+    private static int colval[]={R.color.red,R.color.colorAccent,R.color.colorPrimary, R.color.black};
     private static int colors[]={R.color.hmm, R.color.yellow,R.color.white, R.color.orange};
 
     @Override
@@ -41,6 +45,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         inf = (Button) findViewById(R.id.inf);
         inf.setOnClickListener(this);
+
+        piz=(Button) findViewById(R.id.piz);
+        piz.setOnClickListener(this);
+
+        laba_4=(Button) findViewById(R.id.laba_4);
+        laba_4.setOnClickListener(this);
     }
 
     @Override
@@ -50,12 +60,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(MainActivity.this, Activity_2.class);
                 startActivity(intent);
             break;
+            case R.id.laba_4:
+                Intent rintent = new Intent(MainActivity.this, Activity_3.class);
+                startActivity(rintent);
+                break;
             case R.id.button:
                 k++;
                 if (k%2!=0) th.setText("HEll OR WORLD!");
                 else th.setText("");
-                th.setTextColor(getResources().getColor(colorvals[idx]));
-                idx=(idx+1)%colorvals.length;
+                th.setTextColor(getResources().getColor(colval[idx]));
+                idx=(idx+1)%colval.length;
             break;
             case R.id.third:
                 layout.setBackgroundColor(getResources().getColor(colors[idx]));
@@ -66,10 +80,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.inf:
                 toast = Toast.makeText(this, "Goncharik, Ivanovskaya, Khorovets are created this app", Toast.LENGTH_SHORT);
                 toast.show();
+                break;
+            case R.id.piz:
+                layout.setBackgroundResource(R.drawable.piz);
             break;
             default:break;
         }
     }
-
-
 }
